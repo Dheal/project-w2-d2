@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>List all array items, with keys and values:</p>
+  <button onclick="no1()">Jawaban No 1</button>
+  <p><b>Jawaban No 1 :</b></p>
+<p id="dataArray"></p>
+<p id="panjangArray"></p>
+<br>
+<button onclick="no2()">Jawaban No 2</button>
+<p><b>Jawaban No 2 :</b></p>
+<p id="namaKelompok"></p>
+<p>Pembagian Kelompok</p>
+<p id="kelompok1"></p>
+<p id="kelompok2"></p>
+<br>
+<button onclick="no3()">Jawaban No 3</button>
+<p><b>Jawaban No 3 :</b></p>
+<p id="lama"></p>
+<p id="baru"></p>
+
+<button onclick="no7()">Jawaban No 7</button>
+<p><b>Jawaban No 7 :</b></p>
+<p id="coba"></p>
+<p id="baru"></p>
+
+
+<script>
+function no1(){
+  var pekerjaan =['Software Developer','Database Administrator','Hardware Engineer','System Analyst','Network Architect'];
+  document.getElementById("dataArray").innerHTML = pekerjaan;
+  document.getElementById("panjangArray").innerHTML = `Panjang array adalah ${pekerjaan.length}`;
+  console.log(pekerjaan);
+  console.log(pekerjaan.length);
+}
+
+function no2(){
+  var nama = ["Naufal", "Oktado", "Raka", "Fauzi", "Dheal"];
+  var kel1 = nama.slice(0,3);
+  var kel2 = nama.slice(3,5);
+  document.getElementById("namaKelompok").innerHTML = `Nama kelompok adalah ${nama}`;
+  document.getElementById("kelompok1").innerHTML = `Kelompok 1 adalah ${kel1} dengan ${nama[0]} sebagai ketua kelompok`;
+  document.getElementById("kelompok2").innerHTML = `Kelompok 2 adalah ${kel2} dengan ${nama[3]} sebagai ketua kelompok`;
+  console.log(nama);
+  console.log(kel1);
+  console.log(kel2);
+}
+
+var angka = [3,5,7,9,11];
+var newAngka = angka.map(myUbah)
+
+function myUbah(old) {
+  return old * 5;
+}
+
+function no3(){
+document.getElementById("lama").innerHTML = `Array lama adalah ${angka}`;
+document.getElementById("baru").innerHTML = `Array baru setelah dikalikan 5 adalah ${newAngka}`;
+console.log(angka);
+console.log(newAngka);
+}
+
+
+function no7(){
+  var hero=
+    [
+    ['Ironman','Mekanik'],
+    ['Black widow','Petarung'],
+    ['Hulk','Petarung'],
+    ['Hawkeye','Pemanah'],
+    ['Falcon','Terbang']
+  ]
+  document.getElementById("coba").innerHTML = hero.table;
+  console.table(hero);
+}
+
+
+</script>
+</body>
+</html>
