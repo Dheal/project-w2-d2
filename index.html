@@ -24,6 +24,10 @@
 <p id="lama"></p>
 <p id="baru"></p>
 
+<button onclick="no4()">Jawaban No 4</button>
+<p><b>Jawaban No 4 :</b></p>
+<p id="array"></p>
+
 <button onclick="no7()">Jawaban No 7</button>
 <p><b>Jawaban No 7 :</b></p>
 <p id="coba"></p>
@@ -63,6 +67,16 @@ document.getElementById("lama").innerHTML = `Array lama adalah ${angka}`;
 document.getElementById("baru").innerHTML = `Array baru setelah dikalikan 5 adalah ${newAngka}`;
 console.log(angka);
 console.log(newAngka);
+}
+
+let arr1 = ["Math", "English", "Programming"]
+let arr2 = ["Geography", "Spanish", "Programming"]
+function no4(){
+let banding = arr1.filter(arr1 => arr2.indexOf(arr1) !== -1);
+let hasil = Boolean(banding);
+document.getElementById("array").innerHTML = `Data yang kembar adalah ${banding} hasilnya adalah ${hasil}`;
+console.log(banding);
+console.log(hasil)
 }
 
 
